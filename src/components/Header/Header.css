@@ -1,0 +1,21 @@
+.header{
+    width: 1200px;
+    margin: 0 auto;
+}
+.src-field{
+    width: 370px;
+    /* height: 44px; */
+    background: rgba(153, 133, 133, 0.2);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.nav-link{
+    margin: auto 15px;
+}
+.btn-login{
+    color: black;
+    padding: 6px 30px;
+    background: #F9A51A;
+    border-radius: 5px;
+}

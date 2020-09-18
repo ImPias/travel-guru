@@ -1,0 +1,24 @@
+body{
+    /* background: url('https://sgp1.digitaloceanspaces.com/cosmosgroup/news/2030779_New%20Project(10).jpg'); */
+}
+.main-body{
+    
+}
+.search{
+    width: 450px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #ABABAB;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.btnbooking{
+    width: 400px;
+    height: 50px;
+    background: #F9A51A;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
