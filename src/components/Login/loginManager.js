@@ -32,9 +32,15 @@ export const handleFbSignIn = () => {
     const fbprovider = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(fbprovider)
     .then(function(result) {
-      const user = result.user;
-      user.success = true;
-      return user;
+      const {displayName, email, photoURL} = result.user;
+      const signInUser = {
+        isSignIn: true,
+        name: displayName,
+        email: email,
+        photo: photoURL,
+        success: true
+      }
+      return signInUser;
     }).catch(function(error) {
       error.success = false;
       return error;

@@ -32,9 +32,9 @@ const Header = () => {
                 <Link className="nav-link" style={{color: 'black'}} to="/hotel">Hotel</Link>
                 <Link className="nav-link" style={{color: 'black'}} to="/blog">Blog</Link>
                 <Link className="nav-link" style={{color: 'black'}} to="/contact">Contact</Link>
-                {loggedInUser.email && <span className="d-flex" style={{marginTop: '10px'}}><strong style={{margin: '10px 8px 0 0'}}>{loggedInUser.name}</strong><Avatar alt={loggedInUser.name} src={loggedInUser.photo} /></span>}
-                {loggedInUser.email && <Button onClick={handleLogout} className="btn-login" style={{margin: '12px'}}>Logout</Button>}
-                {!loggedInUser.email && <Link to="/login"><Button className="btn-login">Login</Button></Link>}
+                {(loggedInUser.email || loggedInUser.name) && <span className="d-flex" style={{marginTop: '10px'}}><strong style={{margin: '10px 8px 0 0'}}>{loggedInUser.name}</strong><Avatar alt={loggedInUser.name} src={loggedInUser.photo} /></span>}
+                {(loggedInUser.email || loggedInUser.name) && <Button onClick={handleLogout} className="btn-login" style={{margin: '12px'}}>Logout</Button>}
+                {!loggedInUser.name && <Link to="/login"><Button className="btn-login">Login</Button></Link>}
             </Nav>
         </Navbar>
     );

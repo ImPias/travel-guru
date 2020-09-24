@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import places from '../../fakeData/places';
 import hotelData from '../../fakeData/hotels';
 import ShowHotel from '../ShowHotel/ShowHotel';
+import GoogleMapReact from 'google-map-react';
 
 const Hotel = () => {
     const {placeId} = useParams();
@@ -21,7 +22,14 @@ const Hotel = () => {
                     }
                 </div>
                 <div className="map col-md-6">
-                    <h1>This is map</h1>
+                <div style={{ height: '100vh', width: '100%' }}>
+                    <GoogleMapReact
+                        bootstrapURLKeys={{ key: 'AIzaSyCqhQMbUCTtsdyDWzFXUG3xLBWnSP8eS-0' }}
+                        defaultCenter={{lat: place.latitude, lng: place.longitude}}
+                        defaultZoom={15}
+                    >
+                    </GoogleMapReact>
+                </div>
                 </div>
             </div>
         </div>

@@ -8,10 +8,9 @@ import bannerImg3 from '../../material/Image/sundorbonBanner.jpg';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-
 const Banner = () => {
     return (
-        <MDBContainer>
+      <MDBContainer>
       <MDBCarousel
       activeItem={1}
       length={3}

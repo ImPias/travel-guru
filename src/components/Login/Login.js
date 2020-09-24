@@ -43,6 +43,7 @@ const Login = () => {
             if(res.success){
                 handleResponse(res, true);
             } else {
+                console.log(res);
                 alert(res.message);
             }
         })
